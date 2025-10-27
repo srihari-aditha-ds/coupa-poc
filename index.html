@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocuSign Integration</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f5f5f5; 
+      margin: 0; 
+      padding: 0; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    button { 
+      padding: 16px 32px; 
+      font-size: 1.2rem; 
+      background: #0066ff; 
+      color: #fff; 
+      border: none; 
+      border-radius: 8px; 
+      cursor: pointer; 
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background: #0052cc;
+    }
+    button:active {
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body>
+  <button id="startBtn" onclick="startDocuSign()">Start with DocuSign</button>
+  <script>
+    function startDocuSign() {
+      const docuSignUrl = 'https://apps-d.docusign.com/webforms/us/bec70a5b47662844e926f4985914157d?enableEmbedded=true&accountId=7e51c22f-d560-4a9f-b1a2-906e3ddb43a3&workflowId=c765d982-d65a-45d0-9a75-a85309f2608e&userId=57f23b8e-9b2f-41ed-a7b3-35f5ef1bd4bf&stepId=f61cdbd4-22df-4c62-a954-21c856b7ff7f';
+      
+      // Enable Redirection
+      // console.log('Opening DocuSign with URL:', docuSignUrl);
+      // window.open(docuSignUrl, '_blank');
+
+      // No Redirectoin
+      console.log('Navigating to DocuSign URL:', docuSignUrl);
+      window.location.href = docuSignUrl;
+    }
+  </script>
+</body>
+</html>
