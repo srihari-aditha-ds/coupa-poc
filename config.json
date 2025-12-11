@@ -1,0 +1,26 @@
+{
+  "sftp": {
+    "host": "fileshare-test.coupahost.com",
+    "port": 22,
+    "username": "docusignclm2-usa-appmarketplace",
+    "password": "",
+    "private_key_path": "./coupa_sftp_key",
+    "local_export_dir": "./coupa_exports",
+    "local_import_dir": "./coupa_imports"
+  },
+  "paths": {
+    "remote_export_path": "/Outgoing/Requisitions",
+    "remote_import_path": "/Outgoing/Requisitions",
+    "remote_archive_path": "/Archive/Incoming/Requisitions"
+  },
+  "file_patterns": {
+    "export_filter": "requisition_*.csv",
+    "import_prefix": "requisition_import_"
+  },
+  "processing": {
+    "auto_archive_remote": false,
+    "auto_archive_local": true,
+    "file_format": "csv",
+    "encoding": "utf-8"
+  }
+}
